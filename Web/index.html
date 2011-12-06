@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<link rel="stylesheet" href="../OmegaTech.css"/>
+<title>REuPathDB</title>
+</head>
+
+
+<body>
+<h1>REuPathDB</h1>
+<p align=right><a href="REuPathDB_1.0-0.tar.gz">REuPathDB_1.0-0.tar.gz</a> (14 March 2011)</p>
+
+<p> This package provides an interface to the
+Web Services of Eukaryotic Pathogen Database Resources,
+specifically the <a href="http://eupathdb.org/eupathdb/serviceList.jsp">REST API</a> and the collection methods.
+For each general method, there are two forms: JSON
+and XML. These return JSON and XML content respectively
+but the methods take the same inputs.
+
+<p>
+This package was motivated by Olivier Lucas wondering how
+to interface to the Web service. Since the service is
+described by a collection of Web Application Description Language
+(WADL) documents, we can programmatically explore those documents
+and extract descriptions of the different methods and their
+documentation.
+From this, we generate R code.
+This is done with the general <a href="../WADL">WADL package</a>.
+
+<p>
+We have now modified the code generation (see <a href="generate2.R">generate2.R</a>)
+to this specific interface so that we generate
+a single R function to access the Web Service method for
+the JSON and the XML forms.
+One can specify .json = TRUE or .json = FALSE to use
+the JSON or XML version, respectively.
+
+
+<h2>Examples</h2>
+
+<ul>
+  <li> <a href="eg2.R">Examples of function calls</a>
+</ul>
+
+
+<h2>Code Generation</h2>
+
+<p>
+In addition to the generated code, the top-level directory
+in the source package contains R code to
+<ul>
+  <li> retrieve the WADL files
+  <li> generate the code from the WADLs
+  <li> test the generated code
+  <li> test the API manually
+  <li> a manually written R function that illustrates the target or
+      acts as a template.
+</ul>
+
+
+
+
+<hr>
+<address><a href="http://www.stat.ucdavis.edu/~duncan">Duncan Temple Lang</a>
+<a href=mailto:duncan@wald.ucdavis.edu>&lt;duncan@wald.ucdavis.edu&gt;</a></address>
+<!-- hhmts start -->
+Last modified: Sun Mar 13 20:25:52 PDT 2011
+<!-- hhmts end -->
+</body> </html>

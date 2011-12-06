@@ -1,0 +1,33 @@
+\name{genesbytoxocellcyclefoldchange}
+\alias{GenesByToxoCellCycleFoldChange}
+\title{Find genes that show expression fold change differences along the <i>Toxoplasma</i> cell cycle.}
+\description{Find genes that show expression fold change differences along the <i>Toxoplasma</i> cell cycle.
+<br><br>The following links will load gene lists identified by <a href="http://www.plosone.org/article/info\%3Adoi\%2F10.1371\%2Fjournal.pone.0012354">Behnke et al.</a> to be cell cycle regulated.<br><br>
+1. <a href="im.do?s=bffa83a81ead376f">Cell Cycle Regulated Gene List, Both</a>
+					<br>
+2. <a href="im.do?s=bc7e7d4c43ae1f5a">Cell Cycle Regulated Gene List, G1 Sub Transcriptome</a>
+					<br>
+3. <a href="im.do?s=999efc4e343b8410">Cell Cycle Regulated Gene List, S-M Sub Transcriptome</a>
+<br><br>The RH<sup>TK+</sup> strain used in this analysis expresses a fusion protein of herpes simplex thymidine kinase and chloramphenicol acetyltransferase (<a href="http://www.ncbi.nlm.nih.gov/pubmed/10496908">Radke and White</a>).  Synchronization of RH<sup>TK+</sup> parasites with thymidine followed published protocols (<a href="http://www.ncbi.nlm.nih.gov/pubmed/10496908">Radke and White</a>).  In this synchrony model parasites released from thymidine immediately progress through S, mitosis and then cytokinesis.  The first G1 phase is the start of the next cycle.  All time points represent microarray hybridization results from duplicate, independent biological replicates.  Parasites were seeded at an MOI of 1:1 in HFF cells, and grown for 12 h at 37<sup>o</sup>C (4-8 parasites per vacuole).  To block RH<sup>TK+</sup> growth, overnight culture media was replaced with pre-warmed DMEM media containing 1\% fetal bovine serum and 10 &micro;M thymidine.  The flasks were incubated for 4 h at 37<sup>o</sup>C and then quickly washed 2x with pre-warmed DMEM (no serum) with the second wash immediately replaced with pre-warmed DMEM media containing 1\% serum (three total washes).  RH<sup>TK+</sup> parasites from multiple T175cm<sup>2</sup> flasks (10-20 flasks per RNA sample) were purified from host cells for RNA isolation every hour post-thymidine release using standard protocols.  R0 timepoint=thymidine blocked population.  Asynchronous RH<sup>TK+</sup> samples were harvested from mid-log cultures (8 and 16 parasites/vacuole).  The R0-12 time course represents ~1-2/3 divisions with tachyzoite cell cycle phase repeats R1,R2=R8,R9, R3=R10, R4=R11, and R5=R12 (<a href="http://www.plosone.org/article/info\%3Adoi\%2F10.1371\%2Fjournal.pone.0012354">Behnke et al., 2010</a>)
+   <hr><p> <img src="images/CellCycle.jpg"  height="350px" width="550px">
+   <p> <b>Figure 1.  Synchronization of tachyzoite populations by reversible thymidine-inhibition.</b>  The average vacuole size (black boxes) and fraction of parasites containing internal daughters (black triangles) were determined in RH<sup>TK+</sup> parasite cultures growth-inhibited by thymidine.  At hour intervals through 12 h post-thymidine release, infected monolayers were fixed and stained with anti-IMC1.  Vacuole size and the internal daughter fraction were determined in 100 vacuoles selected at random.  The synchronous division of these populations is evident by the cyclical rise and fall of internal daughter forms that is accompanied by a stepwise increase in vacuole size that marks the end of one cycle and the start of the next.   The cell cycle progression shown here was estimated from these experiments and is validated by previous studies using this synchrony model  (<a href="http://www.ncbi.nlm.nih.gov/pubmed/10496908">Radke and White</a>, <a href="http://www.ncbi.nlm.nih.gov/pubmed/11420103">Radke et al.</a>).
+<hr><p><img src="images/behnke_fig_2.jpg">
+<p><b>Figure 2. DNA content changes of thymidine-synchronized populations.</b>  RH<sup>TK+</sup> parasite cultures were blocked with 10 &micro;M thymidine for 4 h and then released.  At one hour intervals post thymidine-release (R0-R12), parasites were harvested and pooled for RNA isolation with a small sample removed for DNA content analysis prior to cell lysis.    Genomic DNA in ethanol-fixed parasites was stained with SYTOX-Green and changes in DNA content determined by flow cytometry (FL-1; 10,000 events for each sample).  As described previously (<a href="http://www.ncbi.nlm.nih.gov/pubmed/10496908">Radke and White</a>), thymidine-arrested RH<sup>TK+</sup> parasites are blocked at the G1/S phase boundary (R0) and immediately enter S phase upon drug-release (R1).  New daughter parasites start emerging by 3 h post drug-release (R3), and the population enters the S phase of the next cell cycle by 7-8 h post-release.   The cell cycle progression is indicated with cell cycle phase repeats R1,R2=R8,R9, R3=R10, R4=R11, and R5=R12 (C=cytokinesis, M=mitosis, G1=gap 1 phase, S=DNA synthesis).}
+\arguments{
+\item{cc_fc_two_mw}{Choose one or more time point.  NOTE: if more than one is chosen the fold change will be calculated using the average of all samples within the group
+Provide one or more values. Use comma as a delimter.}
+\item{cc_fc_one_mw}{Choose one or more time point.  NOTE: if more than one is chosen the fold change will be calculated using the average of all samples within the group
+Provide one or more values. Use comma as a delimter.}
+\item{fold_change}{Enter a non-negative number.  NOTE:  Fold change is reported in the summary as positive numbers for up-regulated genes and negative numbers for down-regulated genes}
+\item{regulated_dir}{For ConditionA vs. ConditionB, select up-regulated for genes where ConditionA > ConditionB and select down-regulated for genes where ConditionB > ConditionA.}
+\item{o-fields}{Single valued attributes of the feature.
+Provide one or more values. Use comma as a delimter.}
+\item{o-tables}{Multi-valued attributes of the feature.
+Provide one or more values. Use comma as a delimter.}
+\item{.convert}{a logical value or a function that controls how the result of the method is returned. If this is a function, the character string or raw vector is passed to this function and it converts it appropriately. If this is a logical value and \code{TRUE}, then we attempt to convert the result based on its Content-Type returned by the Web server.  If this is \code{FALSE}, the value from the Web server is returned as is.}
+\item{.url}{the URL for the Web request. This defaults to the correct value, but can be specified by the caller if the method is available at a different URL, e.g. locally or in a mirror server.}
+\item{.json}{a logical value controlling whether to use the JSON or the XML version of the method}}
+\value{text/xml
+text/plain}
+\author{}
+

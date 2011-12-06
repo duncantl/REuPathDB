@@ -1,0 +1,20 @@
+This is a collection of issues I came across when building the
+interface and testing it, both manually and programmatically.
+
+The name = POST is incorrect
+
+The path/URL is wrong
+
+AssembliesByLocation is incomplete.
+EstsByLocation.wadl  also
+GenesByExtraerythrocyticExpression.wadl
+GenesByIntraerythrocyticExpression.wadl
+GenesByTimeSeriesFoldChangeBradyFl.wadl
+
+  The .*Questions.wadl files are correct.
+
+
+The response mentions 2 types, but not which is 
+for which method. And the Content-Type returned from
+JSON is text/plain not text/json or application/json.
+
